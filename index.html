@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+         <!-------------lien awesome-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <title>AdminBoard</title> 
+    <!--------lien ck editor--- -->
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>
+  </head>
+   
+</head>
+<body>
+             <!------nav------>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark  ">
+        <div class="container ">
+          <a class="navbar-brand text-white" href="#">AdminBoard</a>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item ">
+                <a class="nav-link active text-white" aria-current="page" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="posts.html">Posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="categori.html">Categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  text-white" href="utilisateur.html">Utilisateurs</a>
+              </li>
+            </ul>
+          </div>
+          <nav class="navbar navbar-expand-lg  ">
+            <div class="container-fluid ">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user"></i> Bienvenue Houssein</a>
+                
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+                  <li><a class="dropdown-item" href="parametre.html"><i class="fa-solid fa-virus"></i> Parametres</a></li>
+                </ul>
+              <ul class="navbar-nav ">
+                <li class="nav-item ">
+                    <a class="nav-link text-white" href="logau.html"><i class="fa-solid fa-user"></i>x Logaut</a>
+                </li>
+             </ul>
+            </div>
+           </nav>
+            </div>
+         </nav>
+                   <!-----------fin de nav------->
+                   <!------------Dashboard------->
+         <section>
+             <div class="container-fluid bg-primary">
+               <div class="container text-white py-3">
+                 <h3><i class="fa-solid fa-gear"></i> Dashboard</h3>
+               </div>
+             </div>
+        </section>
+                
+                 <!-----------Button-------->
+   <section>
+        <div class="container-fluid">
+          <div class="container mt-3">
+            <div class="row">
+            <div class="col-sm-12 col-md-8">
+              <div class=" d-flex justify-content-between">
+               <button class="btn  btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">+Ajouter un post</button> 
+               <button class="btn btn-success mb-3"   data-bs-toggle="modal" data-bs-target="#exampleModal">+Ajouter une Categorie</button>
+               <button class="btn btn-warning mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal2">+Ajouter un utilisateur</button>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+ <!-----------tableau-------->
+ <div class="card">
+  <table class="col-sm-12 col-8 table table-striped">
+  <div class="card-header">
+    <h4>Les posts recent</h4>
+  </div>
+             <tr class="bg-dark text-white">
+              <td class="text-white">#</td>
+              <td class="text-white">Titre</td>
+              <td class="text-white">Categorie</td>
+              <td class="text-white">Date du poste</td>
+              <td></td>
+             </tr>
+             <tr>
+              <td>1</td>
+              <td>Post One</td>
+              <td>Web Developement</td>
+              <td>Octobre 12,2022</td>
+              <td><a href="detail.html"><button type="button" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angles-right"></i>Details</button</a></td>
+             </tr>
+             <tr >
+               <td>2</td>
+               <td>Post Two</td>
+               <td>Tech Godjets</td>
+               <td>Octobre 13;2022</td>
+               <td><button type="button" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angles-right"></i>Details</button></td>
+             </tr>
+              <tr>
+                <td>3</td>
+                <td>Post Three</td>
+                <td>Web Developement (-m</td>
+                <td>Octobre 13;2022</td>
+                <td><button type="button" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angles-right"></i>Details</button></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Post Four</td>
+                <td>Business</td>
+                <td>Octobre 14;2022</td>
+                <td><button type="button" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angles-right"></i>Details</button></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Post Five</td>
+                <td>Web Developement</td>
+                <td>Octobre 15;2022</td>
+                <td><button type="button" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angles-right"></i>Details</button></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Postsix</td>
+                <td>Health & Wellness</td>
+                <td>Octobre 16;2022</td>
+                <td><button type="button" class="btn btn-secondary btn-sm"><i class="fa-solid fa-angles-right"></i>Details</button></td>
+                  
+              </tr>
+              </table>
+            </div> 
+    </div>
+              <!--------------fin du tableau------>
+              <!--------------------------------------------------------->
+              <!-----------cards-------->
+              <div class="col-sm-4 col-md-4 mt-5">
+                <div class="card" >
+                  <div class="card-body bg-primary text-white text-center">
+                    <h5 class="card-title">Post</h5>
+                    <span><h3><i class="fa-solid fa-pencil"></i>6</h3></span>
+                    <button type="button" class="btn btn-outline-primary text-white border btn-sm"></i>View</button>
+                  </div>
+                </div>
+                <daiv class="card" style="margin-top: 1rem">
+                  <div class="card-body bg-warning text-white text-center">
+                    <h5 class="card-title">Categories</h5>
+                    <span><h3><i class="fa-solid fa-folder-open"></i>4</h3></span>
+                    <button type="button" class="btn btn-outline-warning text-white border btn-sm"></i>View</button>
+                  </div>
+                
+                <div class="card" style=" margin-top: 1rem;">
+                      <div class="card-body bg-success text-white text-center">
+                        <h5 class="card-title">Utilisateurs</h5>
+                        <span><h3><i class="fa-solid fa-users"></i>13</h3></span>
+                        <button type="button" class="btn btn-outline-success text-white border btn-sm"></i>View</button>
+                  </div>
+                </div>
+               </div>
+            </div>
+          </div>
+         </section>
+           <!----------- fin cards-------->
+          <!------------------------------------------------>
+        <!------------- Modal1 ------------>
+<section>
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Ajouter un post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Title</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div> 
+          </form>
+          <label for="exampleInputPassword1" class="form-label">Category</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Web Developement</option>
+            <option value="1">Tech Gadgets</option>
+            <option value="2">Business</option>
+            <option value="3">Healt & Wellness</option>
+          </select>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Image Upload</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div id="editor">
+            <div id="editor">
+                <p>This is some sample content.</p>
+            </div>       
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </section>
+  <section>
+    <!-----------findu madal1-->
+  <!-- Modal2-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header  bg-success">
+          <h5 class="modal-title" id="exampleModalLabel">Ajouter Categorie</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Title</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div> 
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section>
+    <!----------fin du modal2-->
+    <!-- Modal3 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header  bg-warning">
+            <h5 class="modal-title" id="exampleModalLabel">Ajouter Categorie</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nom</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div> 
+            </form>
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div> 
+            </form>
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Password</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div> 
+            </form>
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div> 
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+            <!--------fin du modal3--> 
+             <!-----------footer------->
+             <footer class="bg-dark py-4 text-white text-center mt-5">
+              <p>Copy © 2022 AdminBoard</p>
+           </footer>
+       
+
+
+
+  
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
+  ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+</script>
+</body>
+</html>
